@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+body {
+  margin: 0;
+  background: url(images/bg-mobile.svg);
+
+  background-size: 100% auto;
+
+  background-repeat: no-repeat;
+  background-color: var(--Violet);
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.hero {
+  width: 100%;
+}
+.hero > a > img {
+  width: 150px;
+  margin-bottom: 40px;
+}
+.hero > img {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.description {
+  text-align: center;
+  color: white;
+  margin: 50px 10px;
+  margin-bottom: 20px;
+}
+.description > h2 {
+  font-family: 'Poppins', sans-serif;
+}
+.description > button {
+  width: 60%;
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: var(--Violet);
+  outline: none;
+  box-shadow: 0 0 5px rgb(94, 94, 94);
+  cursor: pointer;
+}
+.description > button:hover {
+  background-color: var(--SoftMagenta);
+  color: white;
+  box-shadow: 0 0 10px rgb(55, 55, 55);
+}
+
+.social-icons > a {
+  display: inline-block;
+
+  margin: 30px 10px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--Violet);
+  border: 1px solid white;
+  text-decoration: none;
+  margin-bottom: 0px;
+  position: relative;
+}
+.social-icons > a:hover {
+  border: 1px solid var(--SoftMagenta);
+}
+.fab {
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social-icons > a:hover .fab {
+  color: var(--SoftMagenta);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(229, 22%, 85%);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-size: cover;
+    min-height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero {
+    align-self: flex-start;
+  }
+  .description {
+    align-self: flex-end;
+    text-align: left;
+  }
+  .description > button {
+    margin-left: 0;
+  }
+  .description > .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
